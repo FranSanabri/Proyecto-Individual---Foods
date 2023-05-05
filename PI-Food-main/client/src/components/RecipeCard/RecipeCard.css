@@ -1,0 +1,27 @@
+.imagen{
+    position: relative;
+    top: -10px;
+    left: 20px;
+    border: 1px solid black;
+}
+
+.container{
+    background-image: url('https://img.freepik.com/fotos-premium/manteles_127657-12720.jpg?w=2000');
+    top: 10px;
+    position: relative;
+    left: 450px;
+    border: 2px solid #000000;
+    max-width: 350px;
+    justify-content: flex-start;
+    padding: 3em;
+    border-radius: 15px;
+}
+
+.nombre{
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(0, 0, 0);
+}
+
+.orden{
+    font-size: 20px;
+}
