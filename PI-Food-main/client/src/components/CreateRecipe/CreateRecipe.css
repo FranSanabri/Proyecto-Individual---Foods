@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Noto+Sans:wght@500&display=swap');
+
+.fullContainer {
+    background-image: url("https://img.freepik.com/fotos-premium/seleccion-fuentes-alimentos-ricos-omega-espacio-copia-vista-superior-fondo-madera_106885-3244.jpg?w=2000");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+    color: #fff;
+}
+
+.createContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ced4da42;
+    background: rgba(0,0,0,0.6);
+    border-radius: 10px;
+    width: 50vw;
+    height: 100vh;
+}
+
+.createForm {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input,
+textarea {
+    border-color: transparent;
+    margin: 3px 0;
+    width: 18rem;
+    height: fit-content;
+    border-radius: 10px;
+    font-size: 16px;
+    word-break: break-all;
+}
+
+.createRecipe,
+.goBackHome {
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 8px;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid #6c757d;
+    background-color: #dee2e66b;
+}
+
+.createRecipe:hover,
+.goBackHome:hover {
+    background-color: #adb5bd;
+}
+
+.dietListOpt {
+    margin: 1px;
+    width: fit-content;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.dietsContainerCreate {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 18rem;
+    height: fit-content;
+    grid-template-columns: repeat(2, 7.5rem);
+
+}
+
+input[type=checkbox] {
+    transform: scale(1.25);
+}
+
+.error-message {
+    font-size: 14px;
+    color: #9a0007;
+}
+

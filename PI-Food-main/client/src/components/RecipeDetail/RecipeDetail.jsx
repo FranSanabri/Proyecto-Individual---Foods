@@ -1,54 +1,85 @@
-import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import axios from "axios";
+import React, { useEffect } from "react";
+import { useHistory } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux';
+import { getRecipeDetail, pageDetail, deteleRecipe } from '../../redux/actions/index';
 import './RecipeDetail.css';
 
-const RecipeDetail = () => {
-  const [recipe, setRecipe] = useState({});
-  const { id } = useParams();
-console.log(id);
-  useEffect(() => {
-    axios.get(`http://localhost:3001/recipes/${id}`)
-      .then((response) => {(setRecipe(response.data))})
-      .catch((error) => console.error(error));
-  }, [id]);
-console.log(recipe);
-   if (!recipe.name) return <div>Loading...</div>; 
-  function removeTags(str) {
-    if (str === null || str === "") return false;
-    else str = str.toString();
-
-    return str.replace(/(<([^>]+)>)/gi, "");
-  }
-
-
-
-  const {
-    name,
-    summary,
-    image,
-    dietTypes,
-    healthScore,
-    steps,
-  } = recipe;
-
  
-  return (
-    <div className="contenedor">
-      <h1 className="nombre">{name}</h1>
-      <img src={image} alt={name} />
-      <p className="resumen">Resumen del Plato: {removeTags(summary)}</p>
-      <p>Nivel de comida saludable: {healthScore}</p>
-      <h2>Pasos a seguir:</h2>
-      <ol>
-        {steps.map((step) => (
-          <li key={step.number}>{step.step}</li>
-        ))}
-      </ol>
-      <h2>Tipo de dieta:</h2>
-      <p>{dietTypes && dietTypes.join(", ")}</p>
-    </div>
-  );
-};
+export default function RecipeDetail(props) {
 
-export default RecipeDetail;
+    const id = props.match.params.id;
+    const dispatch = useDispatch();
+    const history = useHistory();
+
+    useEffect(() => {
+        dispatch(getRecipeDetail(id))
+        
+        return () => {
+            dispatch(pageDetail())
+        }
+    }, [dispatch])
+
+    function recipeDelete() {
+        dispatch(deteleRecipe(id))
+        alert('Recipe deleted')
+        history.push('/home')
+    }
+    
+
+    const recipeDetail = useSelector((state) => state.recipeDetail)
+    console.log(recipeDetail);
+    const dietsTypes = recipeDetail.diets?.map((e) => e + " | ")
+    return (
+        <div className="img-fondo">
+            {Array.isArray(recipeDetail)?
+            recipeDetail.map ((e) => {return (
+            <div className="firstDetailsContainer">
+            
+            
+            <div className="imgDetailContainer">
+            <img src={e.image} className="recipeImgBg"></img> </div>
+            <div className="details-container">
+                    {id.length > 15 ? (
+                        <button className="deleteRecipe" onClick={() => recipeDelete()}>X</button>
+                    ) : null}
+            <p className="recipeDetailName">{e.name}</p>
+            <p className="recipeDetailHealthScore">{e.healthScore}</p>
+            <p className="recipeDetailDiets">{e.diets[0]?.name}</p>
+
+            <button className="backToHome" onClick={() => history.goBack()}>Back to Home</button>
+             </div>
+            <div className="secondDetailsContainer">{e.summary}</div>
+            <div className="recipeDetailSummary">{e.stepByStep}
+            </div>
+           
+            </div>  )
+
+        }): 
+            <div className="firstDetailsContainer">
+                <div className="imgDetailContainer">
+                    <img src={recipeDetail.image} alt="recipeImage" className="recipeImgBg" />
+                </div>
+                <div className="details-container">
+                    {id.length > 15 ? (
+                        <button className="deleteRecipe" onClick={() => recipeDelete()}>X</button>
+                    ) : null}
+                    <p className="recipeDetailName">{recipeDetail.name}</p>
+                    <p className="recipeDetailHealthScore">HealthScore: {recipeDetail.healthScore}</p>
+                    <p className="recipeDetailDiets">Diets Types: {recipeDetail.dietTypes}</p>
+                    <button className="backToHome" onClick={() => history.goBack()}>Back to Home</button>
+                </div>
+
+            </div>}
+            <div className="secondDetailsContainer">
+                <p className="recipeDetailSummary" dangerouslySetInnerHTML={{ __html: recipeDetail.summary }}></p>
+                {recipeDetail.steps?.map((el) => {
+                    return (
+                        <p key={el.number}>{el.number + " " + el.step}</p>
+                    )
+                })}
+            </div>
+        </div>
+
+    )
+}
+

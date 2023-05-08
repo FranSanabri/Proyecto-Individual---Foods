@@ -1,0 +1,116 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.searchBar{
+    width: fit-content;
+    height: 1.25rem;
+    display: flex;
+    border-radius: 0.5rem;
+    border: 1px solid white;
+    padding: 0.25rem;
+    align-items: center;
+    opacity: 100%;
+}
+
+.searchInput{
+    font-family: 'Roboto', 'sans serif';
+    color: white;
+    background-color: transparent;
+    border: none;
+    width: 25rem;
+    padding: 1px 0.5rem;
+    font-size: 16px;
+    opacity: 100%;
+   
+}
+
+.searchInput::placeholder{
+    color: #f2f2f2;
+    font-size: 14px;
+    opacity: 100%;
+}
+
+.searchInput:focus{
+    outline: none;
+     opacity: 100%;
+}
+
+.submitInput{
+    display: flex;
+    cursor: pointer;
+    border-color: transparent;
+    border-left: 1px solid #f2f2f2;
+    background-color: transparent;
+    color: white;
+    height: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    opacity: 100%;
+}
+/*  */
+/* .logoSearch{
+    width: 18px;
+    height: 18px;
+    
+}  */
+
+.searchBar {
+    width: fit-content;
+    height: 1.25rem;
+    display: flex;
+    border: 1px solid white;
+    border-radius: 0.5rem;
+    padding: 0.25rem;
+    align-items: center;
+
+  }
+  
+  .submitInput {
+    font-size: 17px;
+    padding: 0.2em 2em;
+    border: transparent;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24);
+    background: #2E2E2E;
+    border-radius: 10px 10px -3px -3px;
+    transition: 0.3s;
+    
+  }
+  
+  .submitInput:hover {
+    transition: 0.3s;
+    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+    cursor: pointer;
+    border-radius: 10px 10px -3px -3px;
+
+  }
+  
+  .submitInput:active {
+    transform: translate(0em, 0.2em);
+    
+    
+  }
+  
+  .submitInput span {
+    font-weight: 800;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.3s;
+    border-radius: 10px 10px -3px -3px;
+
+  }
+  
+  .submitInput:hover span {
+    background: #2E2E2E;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.3s;
+    
+  }
+  
+  
+  ::placeholder {
+    color: rgb(184, 184, 184);
+    
+  }

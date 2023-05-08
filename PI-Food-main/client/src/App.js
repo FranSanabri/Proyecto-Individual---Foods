@@ -1,24 +1,20 @@
-import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import './App.css';
-import LandingPage from './components/LandinPage/LandingPage';
-import HomePage from './components/HomePage/HomePage';
+import { Route } from 'react-router-dom';
+import LandingPage from './components/LandingPage/LangingPage';
+import Home from './components/Home/Home';
+import CreateRecipe from './components/CreateRecipe/CreateRecipe';
 import RecipeDetail from './components/RecipeDetail/RecipeDetail';
-import RecipeForm from './components/RecipeForm/RecipeForm';
+import './App.css'
 
 
-
-
-  const App = () => {
-    return ( 
-      <Router>
-        <Route exact path ="/" component={LandingPage} />
-        <Route exact path ="/home" component={HomePage} />
-        <Route exact path="/recipes/:id" component={RecipeDetail} />
-        <Route exact path="/recipes-form" component={RecipeForm} />
-      </Router>
-    )
-  }
-
+function App() {
+  return (
+    <div className="App">
+      <Route exact path="/" component={LandingPage}/>
+      <Route exact path="/home" component={Home}/>
+      <Route path="/recipes/:id" component={RecipeDetail} />
+      <Route path="/create" component={CreateRecipe}/>
+    </div>
+  );
+}
 
 export default App;

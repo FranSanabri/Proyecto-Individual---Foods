@@ -1,0 +1,57 @@
+.home-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.cardsContainer {
+  display: grid;
+  padding: 5px;
+  grid-template-columns: repeat(3, 300px);
+  justify-content: center;
+  align-items: center;
+  grid-gap: 10px;
+  background-color: #495057c2;
+  border-radius: 10px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.LastCardContainer{
+  display: grid;
+  padding: 5px;
+  grid-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: #495057c2;
+  border-radius: 10px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+.toolbarBox{
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paginateRecipes{
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}

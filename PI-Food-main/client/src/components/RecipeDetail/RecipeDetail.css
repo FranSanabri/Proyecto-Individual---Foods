@@ -1,20 +1,133 @@
-.contenedor{
-    top: 10px;
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Rubik:wght@500&display=swap');
+
+
+
+.img-fondo{
     position: relative;
-    left: 40px;
-    border: 4px solid #000000;
-    max-width: 800px;
-    justify-content: flex-start;
-    padding: 4em;
-    border-radius: 15px;
+    background: url('https://fondosmil.com/fondo/35731.jpg');
+    height: 230vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    margin-top: -10px;
+    
+}
+
+
+.detail-container {
+    width: 100%;
+    min-height: 100vh;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    background: url();
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: top;
+}
+
+.firstDetailsContainer {
+    position: relative;
+    font-size: 18px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 80%;
+    height: 500px;
+    background-color: #00000041;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: #fff;
+    left: 150px;
     background: rgba(0,0,0,0.6);
-
 }
 
-.nombre{
+.secondDetailsContainer {
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: fit-content;
+    background-color: #00000041;
+    color: #fff;
+    border-radius: 10px;
+    left: 150px;
+    background: rgba(0,0,0,0.6);
+}
+
+.imgDetailContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+}
+
+.details-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.recipeImgBg {
+    width: 400px;
+    height: 300px;
+    border-radius: 15px;
+}
+
+.recipeDetailName {
+    font-family: 'Rubik', sans-serif;
+    font-size: 24px;
+}
+
+.backToHome {
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    font-size: 16px;
+    background-color: #3e423e;
+    border: 2px solid #484b48;
+    border-radius: 10px;
     color: white;
+    justify-content: center;
 }
 
-.resumen{
-    color: antiquewhite;
+.backToHome:hover {
+    background-color: #3e423e41;
 }
+
+.deleteRecipe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: static;
+    top: 2px;
+    right: 2px;
+    width: 30px;
+    height: 30px;
+    color: white;
+    font-size: 16px;
+    background-color: #D31111;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.deleteRecipe:hover {
+    background-color: #a4161a;
+}
+
+.detail-container1{
+    background: url('https://img.freepik.com/fotos-premium/seleccion-fuentes-alimentos-ricos-omega-espacio-copia-vista-superior-fondo-madera_106885-3244.jpg?w=2000');
+}
+
