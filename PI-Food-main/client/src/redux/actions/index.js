@@ -83,8 +83,9 @@ export function updateRecipe(id){
 export function createRecipe(data) {
     return async function (dispatch) {
         try {
-            const response = await axios
-                .post(`http://localhost:3001/create`, data)
+            const response = await axios.post(`http://localhost:3001/create`, data, {
+                maxContentLength: Infinity
+            })
             dispatch({ type: CREATE_RECIPE, payload: response.data })
         } catch (error) {
             alert(error)

@@ -23,6 +23,7 @@ export default function Cards() {
     useEffect(() => {
         dispatch(getRecipes());
     }, []);
+    
 
     return recipes.length > 0 && recipes !== undefined ? (
         <>
@@ -40,6 +41,7 @@ export default function Cards() {
                                 id={r.id}
                                 name={r.name}
                                 dietTypes={r.dietTypes}
+                                diets={r. diets}
                                 image={r.image}
                                 healthScore={r.healthScore}
                                 key={r.id}

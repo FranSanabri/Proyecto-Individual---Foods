@@ -13,9 +13,9 @@ export default function CreateRecipe() {
         name: '',
         healthScore: '1',
         summary: '',
-        steps: '',
+        stepByStep: '',
         image: '',
-        diets: []
+        dietTypes: []
     })
 
     const handleSubmit = (e) => {
@@ -36,10 +36,10 @@ export default function CreateRecipe() {
 
     const handleChangeDiets = (e) => {
         if (e.target.checked) {
-            setInput({ ...input, diets: [...input.diets, e.target.value] })
+            setInput({ ...input, dietTypes: [...input.dietTypes, e.target.value] })
         }
         if (!e.target.checked) {
-            setInput({ ...input, diets: input.diets.filter((d) => d !== e.target.value) })
+            setInput({ ...input, diets: input.dietTypes.filter((d) => d !== e.target.value) })
         }
     }
 
@@ -103,7 +103,7 @@ export default function CreateRecipe() {
                             onBlur={()=> validateInput()}
                             rows="3" cols="30" />
                         <span className="error-message">{!validSummary && "Summary required 10 characters min"}</span>
-                        <label htmlFor="steps">Steps:</label>
+                        <label htmlFor="stepByStep">Steps:</label>
                         <textarea
                             type="text"
                             className="stepsInputCreate"

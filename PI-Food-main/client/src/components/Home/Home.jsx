@@ -4,7 +4,7 @@ import './Home.css'
 import Recipes from "../Cards/Recipes";
 
 
-export default function Home() {
+export default function Home({}) {
      return (
         <div className="homeContainer">
             <header>

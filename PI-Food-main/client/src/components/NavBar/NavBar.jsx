@@ -16,6 +16,13 @@ export default function NavBar() {
                 </span>
 
             </NavLink>
+            <img className="logo-1" src="https://fripozo.com/wp-content/uploads/icon-recetas.png" />
+            <NavLink exact to="/about">
+                <span className="about">
+                    About
+                </span>
+
+            </NavLink>
         </nav>
         </>
     )

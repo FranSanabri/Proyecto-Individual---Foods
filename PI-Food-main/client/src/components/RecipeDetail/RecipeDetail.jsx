@@ -44,13 +44,14 @@ export default function RecipeDetail(props) {
                     ) : null}
             <p className="recipeDetailName">{e.name}</p>
             <p className="recipeDetailHealthScore">{e.healthScore}</p>
-            <p className="recipeDetailDiets">{e.diets[0]?.name}</p>
+            <p className="recipeDetailDiets">{e.diets[0]?.name} || {e.diets[1]?.name} {e.diets[2]?.name}
+            </p>
 
             <button className="backToHome" onClick={() => history.goBack()}>Back to Home</button>
              </div>
             <div className="secondDetailsContainer">{e.summary}</div>
-            <div className="recipeDetailSummary">{e.stepByStep}
-            </div>
+            <p >{e.stepByStep} </p>
+           
            
             </div>  )
 

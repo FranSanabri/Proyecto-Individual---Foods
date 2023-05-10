@@ -55,6 +55,7 @@
 }  */
 
 .searchBar {
+  position: relative;
     width: fit-content;
     height: 1.25rem;
     display: flex;
@@ -62,6 +63,7 @@
     border-radius: 0.5rem;
     padding: 0.25rem;
     align-items: center;
+    left: 150px;
 
   }
   

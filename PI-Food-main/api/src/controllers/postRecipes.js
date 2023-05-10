@@ -2,7 +2,7 @@ const { Recipe, Diet } = require("../db");
 
 const createRecipe = async (req, res) => {
     try {
-        const { id, name, image, summary, healthScore, steps, dietTypes } = req.body;
+        const { id, name, image, summary, healthScore, stepByStep, dietTypes } = req.body;
         console.log(req.body);
         //cheqeuar si recipe existe
         const recipeExists = await Recipe.findOne ({where: { name }});
@@ -17,7 +17,7 @@ const createRecipe = async (req, res) => {
             image,
             summary, 
             healthScore, 
-            stepByStep: steps,
+            stepByStep,
             dietTypes,
         });
 
