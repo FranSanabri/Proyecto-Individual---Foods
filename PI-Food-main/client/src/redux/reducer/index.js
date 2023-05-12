@@ -73,13 +73,23 @@ function rootReducer(state = initialState, { type, payload }) {
             }
         case FILTER_DIETS:
             const allRecipesFilter = state.startedRecipes;
-            const recipesFilters = allRecipesFilter.filter((e) => {
-                return e.dietTypes?.includes(payload)
-            })
+            const recipesFilters = allRecipesFilter.filter(r => r.dietTypes?.some(d => d.toLowerCase() === payload.toLowerCase()))           
+            const filteredDiets = allRecipesFilter.filter(r =>{
+              
+             for(let i=0 ;i< r.diets?.length ; i++ ){
+               if(r.diets[i].name.toLowerCase() === payload.toLowerCase()){
+                return true
+
+              } 
+             } 
+             return false
+            })   
+            
             return {
-                ...state,
-                recipes: payload === 'allDiets' ? allRecipesFilter : [...recipesFilters]
-            }
+              ...state,
+              recipes: [...recipesFilters, ...filteredDiets]
+                         
+            };
 
             case FILTER_CREATED:
                 let allCreated = state.startedRecipes;

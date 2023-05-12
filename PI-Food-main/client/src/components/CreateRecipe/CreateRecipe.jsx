@@ -23,7 +23,7 @@ export default function CreateRecipe() {
         if(!input.name){
             alert("Please enter a name")
         }else{
-            dispatch(createRecipe({ ...input, steps: input.steps  }))
+            dispatch(createRecipe({ ...input, stepByStep: input.steps  }))
             alert('Recipe Created')
             history.push("/home")
         }

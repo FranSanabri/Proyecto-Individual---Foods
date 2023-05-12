@@ -1,5 +1,5 @@
 .toolbar{
-    color: white;
+    background: url('https://tse3.mm.bing.net/th?id=OIP.TSzhp2lQvQRkKUfKjeTQcQHaEo&pid=Api&P=0');
     display: flex;
     justify-content: space-around;
     background-color: #343a40ad;
@@ -8,13 +8,20 @@
     align-items: center;
     padding-left: 100px;
     padding-right: 100px;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.filter-by-origin{
+  border-radius: 20px;
+  background-color: black;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .selectMain{
     outline: none;
     margin-left: 5px;
-    border-radius: 10px;
-    border-style: none;
+    border: 2px solid black;
     text-align: center;
 }
 

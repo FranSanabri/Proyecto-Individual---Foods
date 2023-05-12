@@ -5,14 +5,16 @@
     padding: 0;
     overflow-x: hidden;
     font-family: 'Noto Sans', sans-serif;
-    background-image: url('https://fondosmil.com/fondo/35733.jpg');
+    background-image: url('https://media.istockphoto.com/vectors/fast-food-seamless-background-vector-id178284597');
     background-position: center;
     background-repeat: no-repeat;
     background-size:cover;
+    
 }
 
 .recipes-container{
     display: flex;
     flex-direction: column;
+
 }
 

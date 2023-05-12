@@ -38,7 +38,7 @@ export function getRecipeByName(name) {
             dispatch({ type: GET_RECIPE_NAME, payload: axiosResponse.data })
         } catch (error) {
             if (error.response) {
-                alert(error.response.data.message);
+                alert(error.response.data.msg);
             }
         }
     }

@@ -51,7 +51,7 @@ export default function ToolBar({ setOrder, setCurrentPage }) {
                     
                 </select>
             </div>
-            <div>
+            <div className="filter-by-origin">
                 <select onChange={(e)=>handlerFilteredCreated(e)}>
                     <option>Filter By Origin:</option>
                     <option value="API">API</option>

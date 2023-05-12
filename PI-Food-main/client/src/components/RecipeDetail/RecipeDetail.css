@@ -24,20 +24,19 @@
     align-items: center;
     justify-content: center;
     overflow-x: hidden;
-    background: url();
     background-repeat: no-repeat;
     background-size:cover;
     background-position: top;
 }
 
 .firstDetailsContainer {
+    background: url('https://tse3.mm.bing.net/th?id=OIP.TSzhp2lQvQRkKUfKjeTQcQHaEo&pid=Api&P=0');
     position: relative;
     font-size: 18px;
     padding: 10px;
     margin-top: 10px;
     width: 80%;
     height: 500px;
-    background-color: #00000041;
     display: grid;
     grid-template-columns: repeat(2, 50%);
     justify-content: center;
@@ -45,7 +44,6 @@
     border-radius: 10px;
     color: #fff;
     left: 150px;
-    background: rgba(0,0,0,0.6);
 }
 
 .secondDetailsContainer {
@@ -57,11 +55,19 @@
     width: 80%;
     height: fit-content;
     background-color: #00000041;
-    color: #fff;
+    color: #000000;
     border-radius: 10px;
     left: 150px;
-    background: rgba(0,0,0,0.6);
+    background: url('https://tse3.mm.bing.net/th?id=OIP.TSzhp2lQvQRkKUfKjeTQcQHaEo&pid=Api&P=0');
 }
+
+.containerDetailBD{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .imgDetailContainer {
     display: flex;
@@ -87,6 +93,15 @@
 .recipeDetailName {
     font-family: 'Rubik', sans-serif;
     font-size: 24px;
+    color: black;
+}
+
+.recipeDetailHealthScore{
+    color: black;
+}
+
+.recipeDetailDiets{
+    color: black;
 }
 
 .backToHome {
@@ -109,9 +124,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: static;
-    top: 2px;
-    right: 2px;
+    position: relative;
+    bottom: 30px;
+    left: 250px;
     width: 30px;
     height: 30px;
     color: white;

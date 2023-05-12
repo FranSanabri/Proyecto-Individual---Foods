@@ -11,6 +11,8 @@ export default function SearchBar({ setCurrentPage }) {
     const handleChange = (e) => {
       e.preventDefault();
       setSearch(e.target.value);
+      dispatch(getRecipeByName(e.target.value));
+
     }
 
     const handleSubmit = (e) => {

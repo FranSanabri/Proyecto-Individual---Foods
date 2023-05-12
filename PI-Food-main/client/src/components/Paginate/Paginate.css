@@ -4,9 +4,11 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 400px;
-    background-color: #343a40ad;
-    border-radius: 15px;
+    width: 500px;
+    background-color: #000000ad;
+    border-radius: 1px;
+    bottom: 10px;
+    
 
   }
  
@@ -14,21 +16,24 @@
     color:white;
     text-align: center;
     align-items: center;
-    background-color: #264653;
+    background-color: #00b7ff;
     cursor: pointer;
   }
 
   .btnActive {
     color:white;
-    font-size: 16px;
+    font-size: 26px;
     background-color: transparent;   
     text-align: center;
     cursor: pointer;
+    background-color: #00b7ff;
+    
     
   }
 
   .btnPaginate{
     color:white;
     cursor: pointer;
-    background-color: #596475;
+    background-color: #000000;
+    font-size: 15px;
   }
